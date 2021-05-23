@@ -1,1 +1,3 @@
-# url
+# maven-project
+
+Simple Maven Project
