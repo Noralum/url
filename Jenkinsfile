@@ -18,6 +18,12 @@ pipeline {
                 
             }
         }
+        stage ('tomcat deploy') {
+            steps {
+                deploy adapters: [tomcat8(credentialsId: 'TomcatID', path: '', url: 'https://192.168.1.99:8080/')], contextPath: null, war: '**/*.war'
+            }
+
+        }
     }
 
 
