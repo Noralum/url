@@ -2,7 +2,7 @@
 pipeline {
     agent any
     triggers {
-        pollSCM '* * * * *'
+        poll SCM '* * * * *'
     }
     tools {
         maven 'M2_HOME'
@@ -13,7 +13,7 @@ pipeline {
             sh 'mvn clean'
             sh 'mvn install'
             sh 'mvn package'
-            sh 'mvn test'
+            
             
                 
             }
